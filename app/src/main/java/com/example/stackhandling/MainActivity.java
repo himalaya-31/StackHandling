@@ -137,6 +137,29 @@ public class MainActivity extends AppCompatActivity implements FragmentNavigatio
 
     @Override
     public void onNavigationItemReselected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.f1:
+                clearStack(stackOne);
+                getSupportFragmentManager().beginTransaction().show(stackOne.peek()).commit();
+                break;
+            case R.id.f2:
+                clearStack(stackTwo);
+                getSupportFragmentManager().beginTransaction().show(stackTwo.peek()).commit();
+                break;
+            case R.id.f3:
+                clearStack(stackThree);
+                getSupportFragmentManager().beginTransaction().show(stackThree.peek()).commit();
+                break;
+
+        }
+    }
+
+    private void clearStack(Stack<Fragment> stack) {
+        int stackSize = stack.size();
+        for (int i = 1; i < stackSize; i++) {
+            getSupportFragmentManager().beginTransaction().remove(stack.peek());
+            stack.pop();
+        }
     }
 
     @Override
