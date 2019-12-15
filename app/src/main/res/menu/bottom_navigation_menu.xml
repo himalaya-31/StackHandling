@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/f1"
+        android:title="F1"
+        android:icon="@mipmap/ic_launcher_round"/>
+
+    <item
+        android:id="@+id/f2"
+        android:title="F2"
+        android:icon="@mipmap/ic_launcher_round"/>
+
+    <item
+        android:id="@+id/f3"
+        android:title="F3"
+        android:icon="@mipmap/ic_launcher_round"/>
+</menu>
