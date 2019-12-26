@@ -164,8 +164,11 @@ public class MainActivity extends AppCompatActivity implements FragmentNavigatio
 
     @Override
     public void addFragmentsToStack() {
-        stackOne.add(getSupportFragmentManager().findFragmentByTag("frag_one"));
-        stackTwo.add(getSupportFragmentManager().findFragmentByTag("frag_two"));
-        stackThree.add(getSupportFragmentManager().findFragmentByTag("frag_three"));
+        if (!stackOne.contains(getSupportFragmentManager().findFragmentByTag("frag_one")))
+            stackOne.add(getSupportFragmentManager().findFragmentByTag("frag_one"));
+        if (!stackTwo.contains(getSupportFragmentManager().findFragmentByTag("frag_two")))
+            stackTwo.add(getSupportFragmentManager().findFragmentByTag("frag_two"));
+        if (!stackThree.contains(getSupportFragmentManager().findFragmentByTag("frag_three")))
+            stackThree.add(getSupportFragmentManager().findFragmentByTag("frag_three"));
     }
 }
